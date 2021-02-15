@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../../base/namespaces/hello-world
+  - ../../../base/services/hello-world
+
+images:
+  - name: hello-world
+    newName: berveglieri/hello-world-upday
+    newTag: v1.0.0
+
+namespace: hello-world
