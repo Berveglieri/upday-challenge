@@ -8,7 +8,8 @@ pipeline {
                     kustomize build overlays/production/hello-world/ > hello-world.yaml
                     kubectl apply -f hello-world.yaml 
                 '''
-            }
-        }
+      }
     }
+
+  }
 }
