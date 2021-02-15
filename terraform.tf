@@ -8,7 +8,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket = "bopozavuti-tf-state"
+    bucket = "upday-challenge-tf-state"
     prefix = "terraform/state/"
   }
 }
