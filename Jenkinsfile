@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                     echo "deploying to kubernetes"
-                    kustomize build overlays/production/hello-world/ > hello-world.yaml
+                    kustomize build manifests/overlays/production/hello-world/ > hello-world.yaml
                     kubectl apply -f hello-world.yaml 
                 '''
       }
